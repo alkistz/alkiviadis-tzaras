@@ -10,4 +10,14 @@ declare global {
 	}
 }
 
+// Markdown files are compiled by mdsvex into Svelte components.
+// Frontmatter is exposed as the named `metadata` export.
+declare module '*.md' {
+	import type { Component } from 'svelte';
+
+	const component: Component;
+	export default component;
+	export const metadata: Record<string, unknown>;
+}
+
 export {};

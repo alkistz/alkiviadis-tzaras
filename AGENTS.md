@@ -29,3 +29,11 @@ You MUST use this tool whenever writing Svelte code before sending it to the use
 
 Generates a Svelte Playground link with the provided code.
 After completing the code, ask the user if they want a playground link. Only call this tool after user confirmation and NEVER if code was written to files in their project.
+
+## Project notes
+
+- Design spec: `reference/reference.md`. Follow it; when in doubt, remove. Dark-only, one font, tokens in `src/app.css`.
+- Fully static: `prerender = true` and `csr = false` in `src/routes/+layout.ts`. Do not add client-side JavaScript; motion is CSS.
+- Personal strings live only in `src/lib/site.ts`. Content is markdown under `src/lib/content/` (mdsvex), indexed by `src/lib/content/index.ts`.
+- Internal links go through `resolve()` from `$app/paths`; `LinkRow` takes pre-resolved hrefs.
+- Before finishing: `npm run check`, `npm run lint`, `npm run build`. E2E: `npm run test:e2e`.

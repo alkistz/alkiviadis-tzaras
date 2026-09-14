@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./vendor/react.js"></script>
+<script src="./vendor/react-dom.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&amp;display=swap">
+  <style>
+    body { margin: 0; background: #0b0d0c; font-family: 'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace; color: #d6dbd4; }
+    a { color: #c8ff3d; text-decoration: none; } a:hover { color: #ffffff; text-decoration: underline; text-underline-offset: 4px; }
+    .prompt::before { content: "$ "; color: #5c665b; }
+    .blink { display: inline-block; width: 9px; height: 18px; background: #c8ff3d; vertical-align: -3px; animation: blink 1s steps(1) infinite; }
+    @keyframes blink { 50% { opacity: 0; } }
+    .line { animation: type 0.5s both; }
+    @keyframes type { from { opacity: 0; } to { opacity: 1; } }
+  </style>
+</helmet>
+<div style="width: 1440px; height: 900px; background: #0b0d0c; box-sizing: border-box; padding: 40px 56px; display: flex; flex-direction: column; justify-content: space-between;">
+
+  <div style="display: flex; justify-content: space-between; font-size: 13px; color: #5c665b;">
+    <span>~/alkis</span>
+    <div style="display: flex; gap: 32px;">
+      <a href="#" style="color: #8a948a;">work</a>
+      <a href="#" style="color: #8a948a;">writing</a>
+      <a href="#" style="color: #8a948a;">about</a>
+    </div>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 30px; font-size: 17px; line-height: 1.6; max-width: 760px;">
+    <div class="line" style="animation-delay: 0.1s;">
+      <div class="prompt" style="color: #8a948a;">whoami</div>
+      <div style="font-size: 48px; font-weight: 500; line-height: 1.1; color: #ffffff; margin-top: 8px; letter-spacing: -0.02em;">Alkis Tzaras</div>
+    </div>
+    <div class="line" style="animation-delay: 0.6s;">
+      <div class="prompt" style="color: #8a948a;">cat role</div>
+      <div>Backend &amp; AI engineer. <span style="color: #8a948a;">Economist underneath.</span></div>
+    </div>
+    <div class="line" style="animation-delay: 1.1s;">
+      <div class="prompt" style="color: #8a948a;">ls projects</div>
+      <div style="display: flex; gap: 28px;">
+        <a href="#">kiden/</a>
+        <a href="#">iera-polis/</a>
+        <a href="#" style="color: #8a948a;">[more]/</a>
+      </div>
+    </div>
+    <div class="line prompt" style="animation-delay: 1.6s;"><span class="blink"></span></div>
+  </div>
+
+  <div style="display: flex; justify-content: space-between; font-size: 13px; color: #5c665b;">
+    <span>Brussels</span>
+    <div style="display: flex; gap: 28px;">
+      <a href="#" style="color: #8a948a;">github</a>
+      <a href="#" style="color: #8a948a;">linkedin</a>
+      <a href="#" style="color: #8a948a;">email</a>
+    </div>
+  </div>
+</div>
+</x-dc>
+</body>
+</html>
